@@ -3,8 +3,11 @@ const app = express()
 const https = require('https');
 const { XMLParser, XMLBuilder, XMLValidator} = require("fast-xml-parser")
 const parser = new XMLParser()
+const { inject } = require('@vercel/analytics')
 
 const axios = require('axios');
+
+inject()
 
 async function getXmlResponse(url) {
     try {
