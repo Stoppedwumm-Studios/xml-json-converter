@@ -27,7 +27,9 @@ async function getXmlResponse(url) {
 
 
 app.get("/", (req,res) => {
-    res.send(`<h1>The API is at /api/, use ?data=YourData</h1><script>
+    res.send(`<h1>The API is at /api/, use ?data=YourData</h1>
+    Or go to <a href="/info">our Infopage</a>
+    <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     console.log("Analytics should run")
   </script>
@@ -80,8 +82,7 @@ app.get("/api/", (req, res) => {
 
 app.listen(3000, () => {
     console.log("Online")
+    inject()
 })
-
-inject()
 
 module.exports = app
