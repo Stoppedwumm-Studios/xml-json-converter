@@ -65,16 +65,12 @@ app.get("/github", (req,res) => {
 app.get("/api/", (req, res) => {
     const bigdata = req.query.data
     const urldata = req.query.dataurl
-    
-    console.log(urldata)
-    console.log(bigdata)
 
     if (urldata === undefined) {
       res.send(JSON.stringify(parser.parse(bigdata)))
   } else {
       const xmlResponse = getXmlResponse(urldata);
       xmlResponse.then((funny) => {
-        console.log(funny)
         res.send(JSON.stringify(parser.parse(funny)));
       })
   }
