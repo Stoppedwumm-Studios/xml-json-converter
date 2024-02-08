@@ -70,7 +70,7 @@ app.get("/api/", (req, res) => {
     console.log(bigdata)
 
     if (urldata === undefined) {
-      res.send("No data provided");
+      res.send(JSON.stringify(parser.parse(bigdata))
   } else {
       const xmlResponse = getXmlResponse(urldata);
       xmlResponse.then((funny) => {
