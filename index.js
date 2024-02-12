@@ -47,6 +47,7 @@ app.get("/info", (req,res) => {
   <p align="center">Boom, raw data</p>
   <p align="center">Second, get the url (has to be accessible as a normal get request), and put it into https://xml-json-converter.vercel.app/api?dataurl= at the end.
   <p align="center">And thats it!</p>
+  <a href="/github">Our github repo</a>
   <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   console.log("Analytics should run")
